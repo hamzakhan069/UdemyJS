@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
 // Data needed for a later exercise
 const flights =
-  '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
+  "_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30";
 
 // Data needed for first part of the section
 
@@ -22,11 +22,11 @@ const workingHours = {
 };
 
 const restaurant = {
-  name: 'Classico Italiano',
-  location: 'Via Angelo Tavanti 23, Firenze, Italy',
-  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
-  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
-  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+  name: "Classico Italiano",
+  location: "Via Angelo Tavanti 23, Firenze, Italy",
+  categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
+  starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
+  mainMenu: ["Pizza", "Pasta", "Risotto"],
   // ES6 style object (refer above)
   workingHours,
 
@@ -34,7 +34,7 @@ const restaurant = {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
 
-  orderDelivery({ starterIndex = 1, mainIndex = 1, address, time = '20:00' }) {
+  orderDelivery({ starterIndex = 1, mainIndex = 1, address, time = "20:00" }) {
     console.log(
       `ORDER RECEIVED! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
     );
@@ -55,14 +55,14 @@ const restaurant = {
 // OBJECT DESTRUCTURING
 
 restaurant.orderDelivery({
-  time: '22:30',
-  address: 'Via del Sole, 21',
+  time: "22:30",
+  address: "Via del Sole, 21",
   mainIndex: 2,
   starterIndex: 2,
 });
 
 restaurant.orderDelivery({
-  address: 'Via del Sole, 21',
+  address: "Via del Sole, 21",
   starterIndex: 1,
 });
 
@@ -156,9 +156,9 @@ console.log(fullMenu);
 
 // Spread operators works on all iterables! Iterables are Arrays , strings, maps, sets but NOT objects!!!
 
-const fName = 'Hamza';
-const lName = 'Khan';
-const fullName = [...fName, '', ...lName];
+const fName = "Hamza";
+const lName = "Khan";
+const fullName = [...fName, "", ...lName];
 console.log(fullName);
 console.log(...fName);
 // console.log(`${...fName} Khan`);
@@ -178,11 +178,11 @@ console.log(...fName);
 
 // Objects ...
 
-const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Giuseppe' };
+const newRestaurant = { foundedIn: 1998, ...restaurant, founder: "Giuseppe" };
 console.log(newRestaurant);
 
 const restaurantCopy = { ...restaurant };
-restaurantCopy.name = 'Ristorante Roma';
+restaurantCopy.name = "Ristorante Roma";
 console.log(restaurantCopy.name);
 console.log(restaurant.name);
 
@@ -224,20 +224,20 @@ add(7, 4, 1, 9, 6, 2, 5);
 const big = [23, 65, 47];
 add(...big);
 
-restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
-restaurant.orderPizza('chicken');
+restaurant.orderPizza("mushrooms", "onion", "olives", "spinach");
+restaurant.orderPizza("chicken");
 
 // SHORT CIRCUITING && ||
-console.log('===== OR =====');
+console.log("===== OR =====");
 // Use any Data Type
 // Return any Data Type
 // Short Circuit Evaluation
-console.log(3 || 'Jonas');
+console.log(3 || "Jonas");
 // If the first value is a truthy value, it'll immediately return the truthy values
-console.log('' || 'Jonas');
+console.log("" || "Jonas");
 console.log(true || 0);
 console.log(undefined || null);
-console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+console.log(undefined || 0 || "" || "Hello" || 23 || null);
 
 // restaurant.numGuests = 23;
 // const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
@@ -298,39 +298,39 @@ console.log(guestCorrect);
 // GOOD LUCK
 
 const game = {
-  team1: 'Bayern Munich',
-  team2: 'Borrussia Dortmund',
+  team1: "Bayern Munich",
+  team2: "Borrussia Dortmund",
   players: [
     [
-      'Neuer',
-      'Pavard',
-      'Martinez',
-      'Alaba',
-      'Davies',
-      'Kimmich',
-      'Goretzka',
-      'Coman',
-      'Muller',
-      'Gnarby',
-      'Lewandowski',
+      "Neuer",
+      "Pavard",
+      "Martinez",
+      "Alaba",
+      "Davies",
+      "Kimmich",
+      "Goretzka",
+      "Coman",
+      "Muller",
+      "Gnarby",
+      "Lewandowski",
     ],
     [
-      'Burki',
-      'Schulz',
-      'Hummels',
-      'Akanji',
-      'Hakimi',
-      'Weigl',
-      'Witsel',
-      'Hazard',
-      'Brandt',
-      'Sancho',
-      'Gotze',
+      "Burki",
+      "Schulz",
+      "Hummels",
+      "Akanji",
+      "Hakimi",
+      "Weigl",
+      "Witsel",
+      "Hazard",
+      "Brandt",
+      "Sancho",
+      "Gotze",
     ],
   ],
-  score: '4:0',
-  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
-  date: 'Nov 9th, 2037',
+  score: "4:0",
+  scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
+  date: "Nov 9th, 2037",
   odds: {
     team1: 1.33,
     x: 3.25,
@@ -365,7 +365,7 @@ console.log(gk, fieldPlayers);
 const allPlayers = [...players1, ...players2];
 console.log(allPlayers);
 
-const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
+const players1Final = [...players1, "Thiago", "Coutinho", "Perisic"];
 console.log(players1Final);
 
 const {
@@ -377,13 +377,13 @@ const printGoals = function (...scorers) {
   console.log(`${scorers.length} goals were scored!`);
 };
 
-printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich');
-printGoals('Lewandowski', 'Kimmich');
+printGoals("Davies", "Muller", "Lewandowski", "Kimmich");
+printGoals("Lewandowski", "Kimmich");
 
 printGoals(...game.scored);
 
-team1 < team2 && console.log('Team 1 is more likely to win!');
-team1 > team2 && console.log('Team 2 is more likely to win!');
+team1 < team2 && console.log("Team 1 is more likely to win!");
+team1 > team2 && console.log("Team 2 is more likely to win!");
 
 // ..................................
 // Looping Arrays: The FOR OF Loop
@@ -410,14 +410,13 @@ console.log([...newMenu.entries()]);
 // .......................
 
 // old school
-if (restaurant.workingHours.mon)
-  console.log(restaurant.workingHours.mon.open);
+if (restaurant.workingHours.mon) console.log(restaurant.workingHours.mon.open);
 
 // WITH optional chaining
 console.log(restaurant.workingHours.mon?.open);
 console.log(restaurant.workingHours?.mon?.open);
 
-const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
 for (const day of days) {
   // console.log(day);
@@ -425,12 +424,35 @@ for (const day of days) {
   console.log(`On ${day}, we open at ${open}`);
 }
 
-console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
-console.log(restaurant.ordersRisotto?.(0,1) ?? 'Method does not exist');
+console.log(restaurant.order?.(0, 1) ?? "Method does not exist");
+console.log(restaurant.ordersRisotto?.(0, 1) ?? "Method does not exist");
 
+const users = [{ name: "Jonas", email: "hello@jonas.io" }];
 
-const users = [
-  { name: 'Jonas', email: 'hello@jonas.io'}
-];
+console.log(users[0]?.name ?? "User Array empty!");
 
-console.log(users[0]?.name ?? 'User Array empty!');
+// Looping Objects
+
+// Property Names
+const properties = Object.keys(workingHours);
+console.log(properties);
+
+let openStr = `We are open on ${properties.length} days: `;
+
+for (const day of properties) {
+  openStr += `${day}, `;
+}
+console.log(openStr);
+
+// Property Values
+
+const values = Object.values(workingHours);
+console.log(values);
+
+// Entire Object
+const entries = Object.entries(workingHours);
+console.log(entries);
+
+for (const [key, { open, close }] of entries) {
+  console.log(`On ${key} we open at ${open} and close at ${close}`);
+}
