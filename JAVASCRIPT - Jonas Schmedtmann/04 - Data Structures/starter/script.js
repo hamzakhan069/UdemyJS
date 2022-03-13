@@ -757,3 +757,60 @@ const checkBaggage = function (items) {
 checkBaggage('I have a laptop, some Food and a pocket Knife');
 checkBaggage('Socks and camera');
 checkBaggage('Got some snacks and a gun for protection');
+
+console.log('a+very+nice+string'.split('+'));
+console.log('Hamza Khan'.split(' '));
+
+const [firstName, lastName] = 'Hamza Khan'.split(' ');
+const newName = ['Mr.', firstName, lastName.toUpperCase()].join('---');
+console.log(newName);
+
+// self practice to remove commas in number
+let bigStrNumArr = '32,133,875.49'.split(',');
+console.log(bigStrNumArr);
+let bigStrNum = '';
+let newNum = bigStrNum.concat(bigStrNum, ...bigStrNumArr);
+console.log(newNum);
+let formattedNum = Number(newNum);
+console.log(formattedNum);
+// self practice to remove commas in number
+
+const capitalizeName = function (name) {
+  const names = name.split(' ');
+  const namesUpper = [];
+  for (const n of names) {
+    namesUpper.push(n[0].toUpperCase() + n.slice(1));
+  }
+  console.log(namesUpper.join(' '));
+};
+
+capitalizeName('jessica ann smith davis');
+capitalizeName('hamza khan');
+
+// Padding
+
+const message = 'Go to gate 23!';
+console.log(message.padStart(23, '>').padEnd(32, '<'));
+
+// credit Card Info maskinmg
+
+const maskedCreditCard = function (number) {
+  const str = number + '';
+  const last = str.slice(-4);
+  return last.padStart(str.length, 'X');
+};
+
+console.log(maskedCreditCard(12345678901234));
+console.log(maskedCreditCard(4141787865230899));
+
+// Repeat
+
+const message2 = 'Bad Weather... All Departures Delayed... ';
+console.log(message2.repeat(5));
+
+const planesInLine = function (n) {
+  console.log(`There are ${n} planes in line ${'✈️'.repeat(n)}`);
+};
+planesInLine(5);
+planesInLine(3);
+planesInLine(12);
